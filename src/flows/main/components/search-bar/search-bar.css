@@ -1,0 +1,47 @@
+::placeholder {
+  color: wheat;
+  opacity: 1;
+}
+.search_bar {
+  top: 10px; /* Ajustar la distancia desde la parte superior */
+  right: 10px; /* Ajustar la distancia desde el borde derecho */
+  height: 40px;
+  position: absolute; /* Usar posición fija para que el elemento permanezca en la parte superior derecha incluso al hacer scroll */
+  padding: 10px;
+  background: white;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+.btn {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  width: 40px;
+  transition: 0.4s;
+  height: 100%;
+  border-radius: 30px;
+}
+.typing {
+  border: none;
+  background: none;
+
+  padding: 0;
+  outline: none;
+  font-size: 16px;
+  float: left;
+  transition: 0.4s;
+  font-weight: bold;
+  width: 0px;
+  height: 100%;
+}
+.search_bar:hover > .typing,
+.typing:focus {
+  padding: 0 6px;
+  width: 400px;
+}
+.search_bar:hover > .btn,
+.typing:focus ~ .btn {
+  background: white;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import useMainScreen from "./hooks/useMainScreen";
 import Card from "./components/card/Card";
 import "./main.css";
+import SearchBarComponent from "./components/search-bar/search-bar.component";
 export const MainScreen = () => {
   // const { rooms } = useMainScreen();
 
@@ -112,12 +113,17 @@ export const MainScreen = () => {
     },
   ];
   return (
-    <div className="card_container">
-      {rooms?.map((room) => {
-        return <Card room={room} />;
-      })}
+    <div className="main_container">
+      <SearchBarComponent />
+      <div className="card_container">
+        {rooms?.map((room) => {
+          return <Card room={room} />;
+        })}
+      </div>
     </div>
   );
 };
+//añadir al div padre un max width 1280 pix y un min width lo 1280
+// moveer targetas
 
 export default MainScreen;
